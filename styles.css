@@ -1,0 +1,36 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("bachground.webp");
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 500%;
+}
+
+#message-el {
+    font-style: italic;
+    font-size: 200%;
+}
+
+p{
+    font-size: 200%;
+}
+
+button {
+    color: #016f32;
+    width: 15%;
+    background: goldenrod;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-weight: bolder;
+    text-wrap: nowrap;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
