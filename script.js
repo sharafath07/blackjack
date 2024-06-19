@@ -1,5 +1,3 @@
-
-
 let cards = []
 let sum = 0
 let isAlive = true
@@ -36,6 +34,9 @@ function startGame() {
         sum += cards[i]
     }
     sumEl.textContent = 'Sum: ' + sum;
+
+    scoreCalculation()
+
     playResult()
 }
 
@@ -45,6 +46,7 @@ function newCard() {
         sum += cards[cards.length - 1]
         cardsEl.textContent += cards[cards.length - 1] + " "
         sumEl.textContent = 'Sum: ' + sum;
+        scoreCalculation()
     }
     
     playResult()
@@ -59,14 +61,20 @@ function playResult() {
     } else if (sum === 21) {
         messageEl.textContent = 'WOW! It is a Blackjack'
         isAlive = false
-        result.wins += 1
         resultEl.innerHTML = `You won.<br>wins: ${result.wins}<br>losses: ${result.losses}`
     
     } else {
         messageEl.textContent = 'You are out of the game!'
         isAlive = false
-        result.losses += 1
         resultEl.innerHTML = `You lose.Click on start game.<br>wins: ${result.wins}<br>losses: ${result.losses}`
     
+    }
+}
+
+function scoreCalculation() {
+    if(sum === 21){
+        result.wins += 1
+    } else if(sum > 21){
+        result.losses += 1
     }
 }

@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    color: goldenrod;
+    color: gold;
     font-size: 500%;
 }
 
@@ -22,15 +22,31 @@ p{
 }
 
 button {
-    color: #016f32;
-    width: 15%;
-    background: goldenrod;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    color: green;
+    padding: 10px 20px;
+    background: gold;
     font-weight: bolder;
+    font-size: 150%;
     text-wrap: nowrap;
     border: none;
+    margin-left: 20px;
     border-radius: 2px;
     margin-bottom: 1%;
     margin-top: 1%;
+}
+
+@media (min-width: 2500px) {
+    p{
+        font-size: 400%;
+    }
+    #message-el {
+        font-size: 400%;
+    }
+    h1{
+        font-size: 1000%;
+    }
+    button{
+        font-size: 300%;
+        padding: 20px 40px;
+    }
 }
